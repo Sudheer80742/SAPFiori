@@ -1,0 +1,46 @@
+<mvc:View controllerName="project1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page title="sudheer">
+        <content>
+            <Text text="sudheer"/>
+            <Table id="myTable"  items="{p>/Products}">
+                <headerToolbar>
+                    <Toolbar>
+                        <Title text="Products" />
+                    </Toolbar>
+                </headerToolbar>
+                <columns>
+                    <Column>
+                        <Text text="Product ID" />
+                    </Column>
+                    <Column>
+                        <Text text="Name" />
+                    </Column>
+                    <Column>
+                        <Text text="Category" />
+                    </Column>
+                    <Column>
+                        <Text text="Price" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{p>ProductID}" />
+                            <Text text="{p>Name}" />
+                            <Text text="{p>Category}" />
+                            <Text text="{p>Price}"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+            <Button type="Accept" text="Accept"/>
+            <Text text="Lakshmi"/>
+            <Button class="sapUiSmallMargin"
+            text="Press Me" press=".onPush"/>
+            <!-- <mvc:XMLView viewName="project1.view.Dview"/> -->
+            <Input value="{/res/name}" valueLiveUpdate="true" description="hello {/res/name}" width="60%"/>
+        </content>
+    </Page>
+</mvc:View>
